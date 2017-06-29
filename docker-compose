@@ -1,0 +1,8 @@
+jenkins:
+  container_name: jenkins
+  image: mijenkins:latest
+  ports:
+    - "8080:8080"
+  volumes:
+    - /Users/devuser/dev/docker/volumes/jenkins:/var/jenkins_home
+    - /var/run:/var/run:rw
