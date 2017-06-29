@@ -1,0 +1,9 @@
+node {
+   stage 'Checkout'
+
+   git clone 
+
+   stage 'Build Jenkins Container'
+   sh "docker pull jenkinsci/jenkins:latest"
+   sh "docker build -t mijenkins -f ./jenkins/Dockerfile ."
+}credentialsId: 'aa123c45-6abc-78e9-a1b2-583c1234e123', url: 'git@bitbucket.org:myorg/jenkins-repo.git'
